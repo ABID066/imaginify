@@ -8,6 +8,10 @@ export default clerkMiddleware((auth, request) => {
     }
 })
 
+export default authMiddleware({
+  publicRoutes: ['/', '/api/webhooks/clerk', '/api/webhooks/stripe']
+});
+
 
 export const config = {
     matcher: [
